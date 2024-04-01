@@ -1,0 +1,230 @@
+@charset "utf-8";
+
+#navi {
+	margin: 20px 0 0 20px;
+	overflow:hidden;
+}
+
+#navi a {
+	background:#bfbfbf;
+	display:block;
+	position:relative;
+	width:160px;
+	text-decoration:none;
+	padding:12px 0 12px 50px;
+	color:#FFF;
+	-moz-box-sizing: border-box;
+   	-webkit-box-sizing: border-box;
+   	-o-box-sizing: border-box;
+  	-ms-box-sizing: border-box;
+   	box-sizing: border-box;
+	border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+	margin: 0 12px 0 0;
+	float:left;
+	
+}
+
+#navi .on {
+	background:#404040;
+	display:block;
+	position:relative;
+	width:160px;
+	text-decoration:none;
+	padding:12px 0 12px 50px;
+	color:#FFF;
+	-moz-box-sizing: border-box;
+   	-webkit-box-sizing: border-box;
+   	-o-box-sizing: border-box;
+  	-ms-box-sizing: border-box;
+   	box-sizing: border-box;
+	border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+	margin: 0 12px 0 0;
+	float:left;
+	
+}
+
+.navi_b01 a::before {
+	position:absolute;
+	content:'';
+	display: inline-block;
+	background:url(../img/icon01.svg) no-repeat;
+  	width: 28px;
+  	height: 34px;
+	background-size: contain;
+    vertical-align:middle;
+	padding:0 10px 0 0;
+    left: 10px;
+	top: 6px;
+}
+
+.navi_b02 a::before {
+	position:absolute;
+	content:'';
+	display: inline-block;
+	background:url(../img/icon02.svg) no-repeat;
+  	width: 28px;
+  	height: 34px;
+	background-size: contain;
+    vertical-align:middle;
+	padding:0 10px 0 0;
+    left: 10px;
+	top: 6px;
+}
+
+.navi_b03 a::before {
+	position:absolute;
+	content:'';
+	display: inline-block;
+	background:url(../img/icon03.svg) no-repeat;
+  	width: 28px;
+  	height: 34px;
+	background-size: contain;
+    vertical-align:middle;
+	padding:0 10px 0 0;
+    left: 10px;
+	top: 6px;
+}
+
+.navi_b04 a::before {
+	position:absolute;
+	content:'';
+	display: inline-block;
+	background:url(../img/icon04.svg) no-repeat;
+  	width: 28px;
+  	height: 34px;
+	background-size: contain;
+    vertical-align:middle;
+	padding:0 10px 0 0;
+    left: 10px;
+	top: 6px;
+}
+
+.navi_b01 a:active,.navi_b02 a:active,.navi_b03 a:active,.navi_b04 a:active {
+	opacity: .7;
+}
+
+a:hover {
+	opacity: .7;
+}
+
+#main {
+	margin:20px;
+}
+
+#main table {
+	border-top:1px solid #b3b3b3;
+	border-left:1px solid #b3b3b3;
+}
+
+#main table th {
+	border-bottom:1px solid #b3b3b3;
+	border-right:1px solid #b3b3b3;
+	background:#8f8f8f;
+	padding:5px;
+	font-weight:normal;
+	color:#FFF;
+}
+
+#main table td {
+	border-bottom:1px solid #b3b3b3;
+	border-right:1px solid #b3b3b3;
+	background:#FAFAFA;
+	padding:5px;
+}
+
+#result_table table tr:nth-child(odd) td {  
+	background-color: #FFFFFF;  
+}
+#result_table table tr:nth-child(even) td {  
+	background-color: #FAFAFA;   
+} 
+
+input {
+    height: 10px;
+    padding: 5px 0 5px 0;
+    border: 1px solid #ddd !important;
+    color: #828c9a;
+    width: 99.8%;
+    border-radius: 3px;
+    background: #FFF;
+    vertical-align: middle;
+    font-size: 12px;
+	font-family: "Noto Sans Japanese", san-serif;
+}
+
+.select-wrap {
+	width:130px;
+}
+
+select {
+	background:#FFF;
+	font-size:13px;
+	height:24px;
+	padding:0 0 0 5px;
+	color:#666;
+	font-family: "Noto Sans Japanese", san-serif;
+}
+
+.select-wrap:before {
+    z-index: 1;
+    content: '';
+    display: inline-block;
+    background: url(../img/select_icon.svg) no-repeat;
+    width: 11px;
+    height: 10px;
+    background-size: contain;
+    vertical-align: bottom;
+    z-index: 1;
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    pointer-events: none;
+}
+
+#search_button {
+	text-align:center;
+	margin:20px;
+}
+
+.result {
+	font-size:13px;
+	margin:0 0 5px 0;
+}
+
+.result span {
+	font-weight:bold;
+}
+
+#result_table .hamon {
+    border-radius: 3px;
+    color: #fff;
+    background: #B9A995;
+    position: relative;
+    padding: 2px 20px 3px 20px;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    transition: .3s;
+	vertical-align: text-bottom;
+}
+
+#result_table .hamon2 {
+    border-radius: 3px;
+    color: #fff;
+    background: #bfbfbf;
+    position: relative;
+    padding: 2px 20px 3px 20px;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    transition: .3s;
+	vertical-align: text-bottom;
+}

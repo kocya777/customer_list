@@ -1,0 +1,171 @@
+@charset "utf-8";
+
+#login_out {
+	background:#EDEDED;
+	height: 100vh;
+}
+
+#login {
+	width:450px;
+	margin:0 auto 0 auto;
+	border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+	background:#FFF;
+}
+
+#login #title {
+	background:#171612;
+	color:#B9A995;
+	padding:10px 0 10px 0;
+	border-radius: 5px 5px 0 0;
+	text-align:center;
+	font-size:15px;
+	margin:33px 0 0 0;
+}
+
+.login_in {
+	width:350px;
+	margin:0 auto 0 auto;
+	padding:45px 0 50px 0;
+}
+
+#login .type_input {
+    height: 20px;
+    padding: 8px 8px 8px 8px;
+    border: 1px solid #ddd;
+    color: #828c9a;
+    width: 334px;
+    border-radius: 3px;
+    background: none transparent;
+    vertical-align: middle;
+    font-size: inherit;
+    margin: 0 0 20px 0;
+}
+#prt {
+	overflow:hidden;
+	margin: 0 0 20px 0;
+}
+#prt section {
+    float: left;
+    margin: 0 20px 0 0;
+}
+/*CheckBox */
+label.checkbox {
+	cursor     : pointer;
+	width      : 20px;
+	height     : 20px;
+	border     : 1px solid #ddd;
+	background : #fff;
+	overflow   : hidden;
+	position   : relative;
+	display    : inline-block;
+	box-sizing : border-box;
+	border-radius: 3px;
+	top: 3px;
+}
+label.checkbox input[type="checkbox"] {
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	margin     : 0;
+	padding    : 0;
+	position   : absolute;
+	left       : 20px;
+	width      : 20px;
+	height     : 20px;
+	left       : -40px;
+	box-shadow : 39px 0px #FFF;
+	z-index    : 2;
+}
+label.checkbox input[type="checkbox"]:checked {
+	box-shadow : none;
+}
+label.checkbox input[type="checkbox"]:checked:focus {
+	opacity    : 0.1;
+}
+label.checkbox input[type="checkbox"]:focus {
+}
+label.checkbox:after {
+	content           : '';
+	position          : absolute;
+	top               : 40%;
+	left              : 5px;
+	display           : block;
+	margin-top        : -8px;
+	width             : 8px;
+	height            : 12px;
+	border-right      : 3px solid #99CC00;
+	border-bottom     : 3px solid #99CC00;
+	transform         : rotate(45deg);
+	-webkit-transform : rotate(45deg);
+	-moz-transform    : rotate(45deg);
+	z-index           : 1;
+}
+/*CheckBoxとText */
+label.checkbox_text {
+	cursor       : pointer;
+	position     : relative;
+	padding-left : 20px;
+	overflow     : hidden;
+	position     : relative;
+	padding-left : 25px;
+	display: block;
+	box-sizing   : border-box;
+	border-radius: 3px;
+	margin: 0 0 8px 0;
+}
+label.checkbox_text:before {
+	content  : '';
+	position : absolute;
+	width    : 18px;
+	height   : 18px;
+	left     : 0px;
+	top      : 0;
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	z-index  : 3;
+}
+label.checkbox_text:after {
+	content           : '';
+	position          : absolute;
+	top               : 40%;
+	left              : 5px;
+	display           : block;
+	margin-top        : -8px;
+	width             : 8px;
+	height            : 12px;
+	border-right      : 3px solid #99CC00;
+	border-bottom     : 3px solid #99CC00;
+	transform         : rotate(45deg);
+	-webkit-transform : rotate(45deg);
+	-moz-transform    : rotate(45deg);
+	z-index           : 1;
+}
+label.checkbox_text input[type="checkbox"] {
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	position   : absolute;
+	left       : -40px;
+	width      : 20px;
+	height     : 20px;
+	display    : block;
+	box-shadow : 41px 0px #FFF;
+	z-index    : 2;
+	margin     : 0px;
+	padding    : 0px;
+}
+label.checkbox_text input[type="checkbox"]:checked {
+	box-shadow : none;
+}
+label.checkbox_text input[type="checkbox"]:checked:focus {
+	box-shadow : 40px 0px #FFF;
+	opacity    : 0.1;
+}
+label.checkbox_text input[type="checkbox"]:focus {
+	box-shadow : 41px 0px #FFF;
+}
+
+.login_button {
+	text-align:center;
+	margin:50px 0 0 0;
+}

@@ -1,0 +1,178 @@
+<!--
+	モジュール名：
+		index.html
+	機能：
+		ログイン画面表示
+	作成日付：
+		2024/03/29
+	作成者：
+		k.f
+-->
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1024px">
+<title>ログイン | MANAGEMENTシステム</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="css/pure-drawer.css" rel="stylesheet" type="text/css">
+<link href="css/login.css" rel="stylesheet" type="text/css">
+<link href="css/iziModal.min.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/earlyaccess/notosansjapanese.css" rel="stylesheet" />
+<script src="js/jquery.min.js" type="text/javascript"></script>
+<script src="js/main.js" type="text/javascript"></script>
+<script src="js/iziModal.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+
+
+
+/*
+	関数名：
+		check_common_func
+	関数仕様：
+		共通のチェックを行う
+	入力：
+		無し
+	出力：
+		正常：
+			bool true
+		異常：
+			bool false
+*/
+function check_common_func(name_attribute, message) {
+	var characters = $("input[name='" + name_attribute + "']").val();
+	// 入力必須チェック
+	if(characters == "") {
+		alert(message + "は必須です。\n入力してください。")
+		$("input[name='" + name_attribute + "']").focus();
+		return false;
+	}
+
+	// 半角英数字チェック
+	if (characters.match(/[^A-Za-z0-9]+/)) {     
+		//半角英数字以外
+		alert(message + "は半角英数字のみ入力可能です。");
+		$("input[name='" + name_attribute + "']").focus();
+		return false;
+	}
+
+	// 文字制限チェック
+	if(characters.length > 32) {
+		//半角英数字以外
+		alert(message + "は32文字まで入力可能です。");
+		$("input[name='" + name_attribute + "']").focus();
+		return false;
+	}
+
+	return true;
+}
+
+/*
+	関数名：
+		username_check
+	関数仕様：
+		ユーザ名をチェックする
+	入力：
+		無し
+	出力：
+		正常：
+			bool true
+		異常：
+			bool false
+*/
+function username_check() {
+	return check_common_func("username", "ユーザ名");
+}
+
+/*
+	関数名：
+		userpasswd_check
+	関数使用：
+		ユーザパスワードをチェックする
+	入力：
+		無し
+	出力：
+		正常：
+			bool true
+		異常：
+			bool false
+*/
+function userpasswd_check() {
+	return check_common_func("userpasswd", "ユーザパスワード");
+}
+
+/*
+	関数名：
+		go_next
+	関数使用：
+		ログインボタン押下後の処理
+	入力：
+		無し
+	出力：
+		正常：
+			bool true
+		異常：
+			bool false
+*/
+function go_next() {
+	// ユーザ名パラメータチェック
+	ret = username_check()
+	if(ret == false) {
+		return false;
+	}
+
+	// ユーザパスワードパラメータチェック
+	ret = userpasswd_check()
+	if(ret == false) {
+		return false;
+	}
+
+	// indexへサブミットする
+	document.nextpage.submit();
+
+	return true;
+}
+
+</script>
+</head>
+
+<body>
+<div id="login_out">
+<div class="loading">
+  <div class="loader loader-1"></div><!--loader-->
+</div><!--loading end-->
+<header>
+<div id="header_in">
+<div id="header_right">
+
+</div><!--header_right end-->
+</div><!--header_in end-->
+</header>
+<div id="container">
+<div id="login">
+<div id="title">FOR MANAGEMENT</div><!--title end-->
+
+<form action="/index" name="nextpage" class="login_in" method="POST">
+	ログインID<br>
+	<input class="type_input" type="text" name="username">
+
+	ログインPW<br>
+	<input class="type_input" type="password" name="userpasswd">
+
+	{{ if ne .Message "" }}
+	<!--<script>alert({{ .Message }});return false;</script>-->
+	<p style="background: red;color: white">{{ .Message }}</pp>
+	{{ end }}
+	
+	<!--<p style="background-color: red; color: white;">{{ .Message }}</p>-->
+	<div class="login_button">
+	<a class="hamon" href="#" ontouchstart="" data-izimodal-close onclick="go_next();return false">ログイン</a>
+	</div><!--login_button end-->
+</form>
+
+</div><!--login end-->
+</div><!--container end-->
+</div><!--login_out end-->
+</body>
+</html>
